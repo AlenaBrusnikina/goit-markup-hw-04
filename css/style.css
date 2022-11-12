@@ -8,6 +8,7 @@
   --btn-bg: #f5f4fa;
   --footer-item-link: rgba(255, 255, 255, 0.6);
   --border: #ececec;
+  --color-icon:#AFB1B8;
   --ff-raleway: 'Raleway', sans-serif;
 }
 
@@ -126,6 +127,8 @@ p {
 }
 
 .header-items-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -133,8 +136,14 @@ p {
   color: var(--secondary-grey);
 }
 
+.header-items-link-icon {
+  margin-right: 10px;
+  fill:currentColor;
+}
+
+
 .header-link .header-items:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 31px;
 }
 
 .header-items-link:hover,
@@ -153,10 +162,17 @@ p {
 
 /* ------------------HERO------------------- */
 .hero {
-  background-color: var(--hero-bg);
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--hero-bg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .hero-center {
   text-align: center;
 }
@@ -206,6 +222,13 @@ p {
   flex-basis: calc((100%-90px) / 4);
 }
 
+.benefits-item-icon{
+  background-color: var(--btn-bg);
+  padding: 25px 100px;
+  margin-bottom: 28px;
+}
+
+
 .benefits-item-title {
   font-size: 14px;
   line-height: 1.14;
@@ -239,9 +262,6 @@ p {
   gap: 30px;
 }
 
-.activity-item {
-}
-
 /* -------------TEAM---------------------- */
 .team {
   background: var(--btn-bg);
@@ -261,7 +281,7 @@ p {
 }
 
 .team-wrap {
-  padding: 30px 60px;
+  padding: 30px 32px;
 }
 
 .team-title {
@@ -288,6 +308,93 @@ p {
   letter-spacing: 0.03em;
   color: var(--secondary-grey);
 }
+
+.team-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.team-icons-list {
+  width: 44px;
+  height: 44px;
+}
+
+.team-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  color: var(--color-icon);
+  border-radius: 50%;
+}
+
+.team-icons-img {
+  fill: currentColor;
+}
+
+.team-icons-link:hover,
+.team-icons-link:focus {
+  background-color: var(--current-active);
+  color: var(--color-white);
+}
+
+ /* regular customers  */
+
+.customers {
+  padding-top: 94px;
+}
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(primary-grey-dark);
+  margin-bottom: 50px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 94px;
+  gap: 30px;
+}
+
+.customers-item  {
+  width: 170px;
+  height: 92px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-icon);
+  border-radius: 4px;
+  color: var(--color-icon);
+}
+
+.customers-link-img {
+  fill: currentColor;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--current-active);
+  color: var(--current-active);
+}
+
+
+
+
+
 /* --------------FOOTER-------------- */
 .footer {
   background: var(--hero-bg);
